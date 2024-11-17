@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+html {
+    background-color: var(--fundo);
+    font-family: "League Spartan", sans-serif;
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    /* background-color: red; */
+    max-width: 77%;
+    min-height: 70.8%;
+    display: grid;
+    grid: "user-stats star-reviews" 44.9%
+    "customer-reviews customer-reviews" / 
+    1fr 1fr
+}
+
+.container .user-stats {
+    grid-area: user-stats;
+    padding-right: 22%;
+}
+
+.container .user-stats .title {
+    font-size: 52px;
+    line-height: 48px;
+    margin-bottom: 25px;
+    color: var(--titulo-texto-avaliacao-caixa-comentario);
+}
+
+.container .user-stats p {
+    line-height: 25px;
+    letter-spacing: 1.2px;
+    color: var(--paragrafo-principal);
+}
+
+.container .star-reviews {
+    grid-area: star-reviews;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 18px;
+}
+
+.container .star-reviews .stars {
+    background-color: var(--caixa-avaliacao-nome-paragrafo-comentario);
+    width: 442px;
+    display: flex;
+    padding: 18px 0;
+    position: relative;
+    border-radius: 7px;
+}
+
+.container .star-reviews .stars:first-child {
+    transform: translateX(-22%);
+}
+
+.container .star-reviews .stars:nth-child(2) {
+    transform: translateX(-11%);
+}
+
+.container .star-reviews .stars picture {
+    margin: 0 30px;
+}
+
+.container .star-reviews .stars picture img {
+    padding-right: 4px;
+}
+
+.container .star-reviews .stars span {
+    color: var(--titulo-texto-avaliacao-caixa-comentario);
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.container .customer-reviews {
+    grid-area: customer-reviews;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-items: end;
+}
+
+.container .customer-reviews .review {
+    background-color: var(--titulo-texto-avaliacao-caixa-comentario);
+    border-radius: 6px;
+    height: 232px;
+    padding: 40px 31px;
+}
+
+.container .customer-reviews .review:first-child {
+    transform: translateY(-7%);
+}
+
+.container .customer-reviews .review:last-child {
+    transform: translateY(7%);
+}
+
+.container .customer-reviews .perfil {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 29px;
+}
+
+.container .customer-reviews .review .perfil img {
+    width: 14%;
+    border-radius: 50%;
+}
+
+.container .customer-reviews .review .perfil h3 {
+    margin-bottom: 6px;
+    color:  var(--caixa-avaliacao-nome-paragrafo-comentario);
+}
+
+.container .customer-reviews .review .perfil span {
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--span-perfil);
+}
+
+.container .customer-reviews .review p {
+    font-weight: 500;
+    letter-spacing: .6px;
+    line-height: 21px;
+    color: var(--caixa-avaliacao-nome-paragrafo-comentario);
+}

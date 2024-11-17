@@ -1,0 +1,7 @@
+:root {
+    --titulo-texto-avaliacao-caixa-comentario: hsl(300, 43%, 22%);
+    --span-perfil: hsl(333, 80%, 67%);
+    --paragrafo-principal: hsl(303, 10%, 53%);
+    --caixa-avaliacao-nome-paragrafo-comentario: hsl(300, 24%, 96%);
+    --fundo: hsl(0, 0%, 100%);
+}
