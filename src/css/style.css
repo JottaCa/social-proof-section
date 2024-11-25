@@ -10,22 +10,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
     /* background-color: red; */
-    max-width: 77%;
-    min-height: 70.8%;
+    min-width: 77%;
     display: grid;
-    grid: "user-stats star-reviews" 44.9%
-    "customer-reviews customer-reviews" / 
-    1fr 1fr
+    grid: "user-stats star-reviews" 
+    "customer-reviews customer-reviews"/ 
+    416px ;
+    gap: 90px 0;
 }
 
 .container .user-stats {
     grid-area: user-stats;
-    padding-right: 22%;
 }
 
 .container .user-stats .title {
@@ -55,16 +54,15 @@ body {
     width: 442px;
     display: flex;
     padding: 18px 0;
-    position: relative;
     border-radius: 7px;
 }
 
 .container .star-reviews .stars:first-child {
-    transform: translateX(-22%);
+    transform: translateX(-96px);
 }
 
 .container .star-reviews .stars:nth-child(2) {
-    transform: translateX(-11%);
+    transform: translateX(-48px);
 }
 
 .container .star-reviews .stars picture {
@@ -85,15 +83,19 @@ body {
     grid-area: customer-reviews;
     display: grid;
     gap: 32px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    place-items: end;
+    grid-template-columns: repeat(auto-fit, minmax(222px, 1fr));
+    place-items: center;
 }
 
 .container .customer-reviews .review {
     background-color: var(--titulo-texto-avaliacao-caixa-comentario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 6px;
-    height: 232px;
-    padding: 40px 31px;
+    min-height: 232px;
+    max-width: 350px;
+    padding: 10px 31px;
 }
 
 .container .customer-reviews .review:first-child {
@@ -111,7 +113,8 @@ body {
 }
 
 .container .customer-reviews .review .perfil img {
-    width: 14%;
+    max-width: 36px;
+    max-height: 36px;
     border-radius: 50%;
 }
 
